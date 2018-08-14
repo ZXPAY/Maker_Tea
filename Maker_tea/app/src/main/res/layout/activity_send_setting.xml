@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendSettingActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="5"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/IMG_BACK"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            app:srcCompat="?android:attr/actionModeCloseDrawable"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="242dp"
+            android:layout_height="46dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="72dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/color_lite"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="140dp" />
+
+        <TextView
+            android:id="@+id/TXV_COLOR"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="茶色："
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="140dp" />
+
+        <TextView
+            android:id="@+id/TXV_COLORSHOW"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text=" 140"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+        <ImageView
+            android:id="@+id/IMG_TEA"
+            android:layout_width="80dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/tea_leaf"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="133dp" />
+
+        <TextView
+            android:id="@+id/TXV_TEA"
+            android:layout_width="82dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="茶種："
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="162dp" />
+
+        <Spinner
+            android:id="@+id/SPINNER_TEA"
+            android:layout_width="230dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="186dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <ImageView
+            android:id="@+id/IMG_FLAVER"
+            android:layout_width="80dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/tea"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="238dp" />
+
+        <TextView
+            android:id="@+id/TXV_FLAVOR"
+            android:layout_width="92dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="口味："
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <Spinner
+            android:id="@+id/SPINNER_FLAVOR"
+            android:layout_width="234dp"
+            android:layout_height="34dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/BT_SEND"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/TXV_LIGHT"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" 淡"
+            android:textColor="#bb5e00"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/SEEKBAR"
+            android:layout_width="288dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:foregroundGravity="center_horizontal"
+            android:max="10"
+            android:min="0"
+            android:progress="5"
+            android:thumb="@drawable/logo_small"
+            app:layout_constraintBottom_toTopOf="@+id/BT_SEND"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+        <TextView
+            android:id="@+id/TXV_STRONG"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="濃 "
+            android:textColor="#642100"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BT_SEND"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_weight="1"
+        android:text="Click to send"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+
+
+</android.support.constraint.ConstraintLayout>

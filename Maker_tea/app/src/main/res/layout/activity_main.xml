@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <!--
+    <include
+        layout="@layout/app_actionbar"
+        android:id="@+id/myActionBar">
+
+    </include>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/IMG_TITLE"
+            android:layout_width="249dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ncyu" />
+
+        <ImageView
+            android:id="@+id/IMG_SETTING"
+            android:layout_width="61dp"
+            android:layout_height="57dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/setting"
+            tools:layout_editor_absoluteX="289dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            fontPath="fonts/SentyGoldenBell.ttf"
+            android:layout_width="88dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/IMG_SETTING"
+            android:layout_below="@+id/IMG_SETTING"
+            android:layout_marginStart="-19dp"
+            android:text="傳送參數" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="359dp"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/CHOOSE_TEA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="選擇茶葉：紅茶 Black Tea"
+            android:textAppearance="@style/ChooseTeaStyle"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="117dp" />
+
+        <TextView
+            android:id="@+id/TXV_FLAVOR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            fontPath="fonts/SentyWEN2017.ttf"
+            textStyle="bold"
+            android:gravity="left"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="358dp"
+        android:layout_height="89dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <ImageView
+            android:id="@+id/IMG_TEA"
+            android:layout_width="94dp"
+            android:layout_height="89dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/nice_lite"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="100dp" />
+
+        <TextView
+            android:id="@+id/TXV_TEMP"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="溫度"
+            android:textAppearance="@style/TemperatureStyle"
+            fontPath="fonts/SentyWEN2017.ttf"
+            android:textColor="@color/colorBlack"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="161dp" />
+
+        <TextView
+            android:id="@+id/TXV_TEMPERATURE"
+            android:layout_width="93dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="溫度資料"
+            textStyle="bold"
+            android:textAppearance="@style/TemperatureDataStyle"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="161dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="359dp"
+        android:layout_height="83dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/color_lite"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="232dp" />
+
+        <TextView
+            android:id="@+id/TXV_COLORNAME"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="茶色"
+            android:textAppearance="@style/ColorStyle"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="237dp" />
+
+        <TextView
+            android:id="@+id/TXV_COLOR"
+            android:layout_width="93dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="茶色資料"
+            android:textAppearance="@style/ColorStyle"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="237dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="360dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/TXV_DATA_RECORD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="數據紀錄時間："
+            fontPath="fonts/SentyWEN2017.ttf"
+            android:textSize="18dp"
+            android:gravity="center"
+            textStyle="bold"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="459dp" />
+
+        <TextView
+            android:id="@+id/TXV_FINAL_UPDATE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最後更新時間："
+            fontPath="fonts/SentyWEN2017.ttf"
+            android:textSize="18dp"
+            android:gravity="center"
+            textStyle="bold"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="486dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

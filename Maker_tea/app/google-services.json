@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "648605414751",
+    "firebase_url": "https://smartteacupproject-203ec.firebaseio.com",
+    "project_id": "smartteacupproject-203ec",
+    "storage_bucket": "smartteacupproject-203ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648605414751:android:584daaff3f96da23",
+        "android_client_info": {
+          "package_name": "com.example.zxpay.maker_tea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648605414751-fenppe008doujup9oc0la71hpg3sk21v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zxpay.maker_tea",
+            "certificate_hash": "2588f2131ca160fbc30876989a49026d14d9da2b"
+          }
+        },
+        {
+          "client_id": "648605414751-18ggaevrr2qg9qvmlc59mvf0sl18hfh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDujo4n3uAS9Td451TSymz-sSG4Mw2V-K0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648605414751-18ggaevrr2qg9qvmlc59mvf0sl18hfh0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

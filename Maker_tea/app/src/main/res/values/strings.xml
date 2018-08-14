@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">基德茶杯</string>
+
+    <string name="temperature_unit">\u00b0C</string>
+    <string name="SettingName">/SettingData</string>
+    <string name="TestingName">/TestingData</string>
+    <string name="SettingBlackTeaA">/SettingData</string>
+    <string name="SettingGreenTeaA">/SettingData</string>
+    <string name="SettingOolongTeaA">/SettingData</string>
+    <string name="TestingBlackTeaC">/TestingData</string>
+    <string name="TestingGreenTeaC">/TestingData</string>
+    <string name="TestingOolongTeaC">/TestingData</string>
+
+    <string name="keySettingtaste">taste</string>
+    <string name="keySettingtea">tea</string>
+    <string name="keySettingcolor">color</string>
+    <string name="keySettingtime">time</string>
+
+    <string name="keyTestingcolor">color</string>
+    <string name="keyTestingcolorB">colorB</string>
+    <string name="keyTestingcolorG">colorG</string>
+    <string name="keyTestingcolorR">colorR</string>
+    <string name="keyTestingtea">tea</string>
+    <string name="keyTestingtemp">temp</string>
+    <string name="keyTestingtime">time</string>
+
+    <string name="keyTaste">taste</string>
+    <string name="keyTea">tea</string>
+    <string name="keyTime">time</string>
+    <string name="keyColor">color</string>
+    <string name="keyColorB">colorB</string>
+    <string name="keyColorG">colorG</string>
+    <string name="keyColorR">colorR</string>
+    <string name="keyTemp">temp</string>
+
+    <string name="keyKindsOfBlackTea">Black_Tea</string>
+    <string name="keyKindsOfGreenTea">Green_Tea</string>
+    <string name="keyKindsOfOolongTea">Oolong_Tea</string>
+
+    <string-array name="SettingTea">
+        <item>/SettingData/Black_Tea/RawDataA</item>
+        <item>/SettingData/Green_Tea/RawDataA</item>
+        <item>/SettingData/Oolong_Tea/RawDataA</item>
+    </string-array>
+
+    <string-array name="TestingTea">
+        <item>/TestingData/Black_Tea/RawDataC</item>
+        <item>/TestingData/Green_Tea/RawDataC</item>
+        <item>/TestingData/Oolong_Tea/RawDataC</item>
+    </string-array>
+
+    <string-array name="KindsOfTea">
+        <item>紅茶 Black Tea</item>
+        <item>綠茶 Green Tea</item>
+        <item>烏龍茶 Oolong Tea</item>
+    </string-array>
+
+    <string name="KindsOfBlackTea">紅茶 Black Tea</string>
+    <string name="KindsOfGreenTea">綠茶 Green Tea</string>
+    <string name="KindsOfOolongTea">烏龍茶 Oolong Tea</string>
+
+    <string-array name="FlavorNumber">
+        <item>口味等級 1</item>
+        <item>口味等級 2</item>
+        <item>口味等級 3</item>
+        <item>口味等級 4</item>
+        <item>口味等級 5</item>
+        <item>口味等級 6</item>
+        <item>口味等級 7</item>
+        <item>口味等級 8</item>
+        <item>口味等級 9</item>
+        <item>口味等級 10</item>
+    </string-array>
+
+
+</resources>

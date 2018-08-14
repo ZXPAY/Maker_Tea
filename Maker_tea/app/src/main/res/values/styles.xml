@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--
+        <item name="actionBarStyle">@style/MyActionBarLogo</item>
+        -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+        <item name="android:typeface">serif</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:typeface">serif</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+        <item name="android:title">@string/app_name</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyActionBarLogo" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@color/colorPrimary</item>
+        <item name="android:title">@string/app_name</item>
+        <item name="displayOptions">useLogo|showHome</item>
+    </style>
+
+
+    <style name="ChooseTeaStyle" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SentyTEA.ttf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="TemperatureStyle" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SentyWEN2017.ttf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="TemperatureDataStyle" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SentyWEN2017.ttf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="ColorStyle" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SentyWEN2017.ttf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="ColorDataStyle" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SentyWEN2017.ttf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+</resources>
