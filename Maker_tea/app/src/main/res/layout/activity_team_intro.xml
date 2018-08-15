@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamIntroActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="392dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="70dp">
+
+                <ImageView
+                    android:id="@+id/IMG_YONG_MIN"
+                    android:layout_width="153dp"
+                    android:layout_height="139dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/yong_ming"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="84dp" />
+
+                <TextView
+                    android:id="@+id/TXV_YONG_MIN"
+                    android:layout_width="174dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="93dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="70dp">
+
+                <ImageView
+                    android:id="@+id/IMG_CHOIE_WEI"
+                    android:layout_width="153dp"
+                    android:layout_height="139dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/choie_wei"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="84dp" />
+
+                <TextView
+                    android:id="@+id/TXV_CHOIE_WEI"
+                    android:layout_width="174dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="93dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="70dp">
+
+                <ImageView
+                    android:id="@+id/IMG_YI_CHING"
+                    android:layout_width="153dp"
+                    android:layout_height="139dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/yi_jing"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="84dp" />
+
+                <TextView
+                    android:id="@+id/TXV_YI_CHIN"
+                    android:layout_width="174dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="93dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="70dp">
+
+                <ImageView
+                    android:id="@+id/IMG_FU_YUAN"
+                    android:layout_width="153dp"
+                    android:layout_height="139dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/fu_yuan"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="84dp" />
+
+                <TextView
+                    android:id="@+id/TXV_FU_YUAN"
+                    android:layout_width="174dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="93dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="70dp">
+
+                <ImageView
+                    android:id="@+id/IMG_ZHI_XIANG"
+                    android:layout_width="153dp"
+                    android:layout_height="139dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/zhi_xiang"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="84dp" />
+
+                <TextView
+                    android:id="@+id/TXV_ZHI_XIANG"
+                    android:layout_width="174dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="93dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginTop="4dp"
+        android:text="團隊介紹:"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+</android.support.constraint.ConstraintLayout>

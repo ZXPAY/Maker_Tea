@@ -1,11 +1,16 @@
 package com.example.zxpay.maker_tea;
 
+import android.app.AlertDialog;
+import android.app.Service;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     int CHOOSE_GREEN = 1;
     int CHOOSE_OOLONG = 2;
     int ChoosingMode = CHOOSE_BLACK;
-    boolean AutoFlag = false;
     int TempCool = 40;
     int TempHot = 55;
     final int DEFAULT_BALCK_TEA_COLOR = 130;
@@ -81,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     int DEFAULT_POLLING_TIME = 1500;
 
     boolean switchTimerTestingOrSetting = true;
+    boolean isVibrateFlag = false;
+    boolean runOneTimeFlagAlart = false;
     Button AutoButton;
     String NewestSettingTea = "";
     TextView TXV_FinalUpdate, TXV_FinalRecord, TXV_Temperature, TXV_Color, TXV_Tea, TXV_Flavor;
@@ -157,6 +163,18 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         TXV_Tea = (TextView) findViewById(R.id.CHOOSE_TEA);
         TXV_Flavor = (TextView) findViewById(R.id.TXV_FLAVOR);
 
+        TextView TXV_TempTitle = (TextView) findViewById(R.id.TXV_TEMP);
+        TextView TXV_ColorTitle = (TextView) findViewById(R.id.TXV_COLORNAME);
+
+        setTextViewBold(TXV_FinalUpdate);
+        setTextViewBold(TXV_FinalRecord);
+        setTextViewBold(TXV_Temperature);
+        setTextViewBold(TXV_Color);
+        setTextViewBold(TXV_Tea);
+        setTextViewBold(TXV_Flavor);
+        setTextViewBold(TXV_TempTitle);
+        setTextViewBold(TXV_ColorTitle);
+
 //        AutoButton = (Button) findViewById(R.id.BT_AUTO);
 
         ArrayAdapter<CharSequence> myAdapter = ArrayAdapter.createFromResource(
@@ -190,6 +208,8 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         catch (Exception e){
             e.printStackTrace();
         }
+        isVibrateFlag = false;
+        setVibrateClose();
 
     }
 
@@ -203,10 +223,15 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.MENU_ID:
+            case R.id.MENU_SETTING:
                 Log.e("Menu", "Setting");
                 Intent itToParameter = new Intent(this, ParamterSettingActivity.class);
                 startActivity(itToParameter);
+                break;
+            case R.id.MENU_TEAM_INTRO:
+                Log.e("Menu", "Team introduce");
+                Intent itToTeamIntro = new Intent(this, TeamIntroActivity.class);
+                startActivity(itToTeamIntro);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -225,6 +250,9 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
 
     }
 
+    private void setTextViewBold(TextView myTXV){
+        myTXV.setTypeface(myTXV.getTypeface(), Typeface.BOLD);
+    }
 
     private boolean isConnectToNetwork(){
         ConnectivityManager mConnectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -297,6 +325,16 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     private void setCoolTeaImg(){
         // Temperature <= 40
         ImgTea.setImageResource(R.drawable.cool_lite);
+    }
+
+
+    public void setVibrate(int time){
+        Vibrator myVibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
+        myVibrator.vibrate(time);
+    }
+    public void setVibrateClose(){
+        Vibrator myVibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
+        myVibrator.cancel();
     }
 
     @Override
@@ -534,6 +572,17 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                                 DataTestingColor.put(time.get(pos), color.get(pos));
                                 TXV_Color.setText(String.format("%.1f", Float.parseFloat(color.get(pos))));
                                 setColorDataColor(Float.parseFloat(color.get(pos)));
+
+                                if(isTeaOK(Float.parseFloat(color.get(pos))) && isVibrateFlag==false){
+                                    setVibrate(1000);
+                                    if(runOneTimeFlagAlart == false){
+                                        setAlarm();
+                                        runOneTimeFlagAlart = true;
+                                    }
+                                }
+                                else if(isVibrateFlag){
+                                    setVibrateClose();
+                                }
                             }
                         }
                     }
@@ -610,8 +659,50 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                     }
                     break;
             }
-
         }
+    }
+
+    private boolean isTeaOK(float colorData){
+        float teaGoodColor;
+        if(getStringFlavorUsingIntent != null){
+            if(ChoosingMode == CHOOSE_BLACK){
+                teaGoodColor = DEFAULT_BALCK_TEA_COLOR*((Float.parseFloat(getStringFlavorUsingIntent)-5)/10+1);
+//                Log.e("isOK", String.format("%.2f", colorData));
+//                Log.e("isOK", String.format("%.2f", teaGoodColor));
+//                Log.e("isOK", String.valueOf(Math.abs(colorData-teaGoodColor)));
+                if(Math.abs(colorData-teaGoodColor) < 5){
+                    return true;
+                }
+            }
+            else if(ChoosingMode == CHOOSE_GREEN){
+                teaGoodColor = DEFAULT_GREEN_TEA_COLOR*((Float.parseFloat(getStringFlavorUsingIntent)-5)/10+1);
+                if(Math.abs(colorData-teaGoodColor) < 5){
+                    return true;
+                }
+            }
+            else if(ChoosingMode == CHOOSE_OOLONG){
+                teaGoodColor = DEFAULT_OOLONG_TEA_COLOR*((Float.parseFloat(getStringFlavorUsingIntent)-5)/10+1);
+                if(Math.abs(colorData-teaGoodColor) < 5){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private void setAlarm(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        builder.setMessage("茶煮好囉～～～").setCancelable(false).setPositiveButton("確認", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+                isVibrateFlag = true;
+                setToastAndShow("請慢用 ~");
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.setCancelable(false);
+        alert.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        alert.show();
     }
 
     private void setColorDataColor(float colorData){

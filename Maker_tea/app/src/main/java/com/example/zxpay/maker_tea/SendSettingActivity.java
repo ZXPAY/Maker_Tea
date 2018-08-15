@@ -3,6 +3,7 @@ package com.example.zxpay.maker_tea;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
@@ -84,6 +85,7 @@ public class SendSettingActivity extends AppCompatActivity implements Button.OnC
         }
 
         TXV_COLOR = findViewById(R.id.TXV_COLORSHOW);
+        setTextViewBold(TXV_COLOR);
 
         for(int id:ImgID){
             ImageView imgBt = (ImageView) findViewById(id);
@@ -124,14 +126,14 @@ public class SendSettingActivity extends AppCompatActivity implements Button.OnC
             e.printStackTrace();
         }
         setFlavorNumberColor(mySeekbar.getProgress());
+
     }
 
     private void setSpinnerTea(){
         spinnerTea = (Spinner) findViewById(R.id.SPINNER_TEA);
         AdapterTea = ArrayAdapter.createFromResource(
-                this, R.array.KindsOfTea, android.R.layout.simple_spinner_item );
-        AdapterTea.setDropDownViewResource(
-                android.R.layout.simple_spinner_dropdown_item);
+                this, R.array.KindsOfTea, R.layout.spinner_item);
+        AdapterTea.setDropDownViewResource(R.layout.spinner_item);
         spinnerTea.setAdapter(AdapterTea);
         spinnerTea.setOnItemSelectedListener(this);
     }
@@ -139,9 +141,8 @@ public class SendSettingActivity extends AppCompatActivity implements Button.OnC
     private void setSpinnerFlavor(){
         spinnerFlavor = (Spinner) findViewById(R.id.SPINNER_FLAVOR);
         AdapterFlavor = ArrayAdapter.createFromResource(
-                this, R.array.FlavorNumber, android.R.layout.simple_spinner_item );
-        AdapterFlavor.setDropDownViewResource(
-                android.R.layout.simple_spinner_dropdown_item);
+                this, R.array.FlavorNumber, R.layout.spinner_item);
+        AdapterFlavor.setDropDownViewResource(R.layout.spinner_item);
         spinnerFlavor.setAdapter(AdapterFlavor);
         spinnerFlavor.setOnItemSelectedListener(this);
         AdapterFlavor.notifyDataSetChanged();
@@ -176,6 +177,9 @@ public class SendSettingActivity extends AppCompatActivity implements Button.OnC
         }
     }
 
+    private void setTextViewBold(TextView myTXV){
+        myTXV.setTypeface(myTXV.getTypeface(), Typeface.BOLD);
+    }
 
     private void setSendDataToFirebase(){
         if(toast != null){

@@ -2,10 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/MENU_ID"
-        android:title="Settings"
+        android:id="@+id/MENU_SETTING"
+        android:title="設定"
         app:showAsAction="never">
-
+    </item>
+    <item
+        android:id="@+id/MENU_TEAM_INTRO"
+        android:title="團隊簡介"
+        app:showAsAction="never">
     </item>
 
 </menu>

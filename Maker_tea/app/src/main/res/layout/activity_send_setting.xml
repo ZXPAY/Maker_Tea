@@ -54,7 +54,7 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="72dp"
+            android:layout_width="89dp"
             android:layout_height="56dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/color_lite"
@@ -63,26 +63,24 @@
 
         <TextView
             android:id="@+id/TXV_COLOR"
-            android:layout_width="88dp"
+            android:layout_width="133dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_weight="1"
             android:gravity="center"
             android:text="茶色："
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:textAppearance="@style/ColorStyle"
             tools:layout_editor_absoluteX="77dp"
             tools:layout_editor_absoluteY="140dp" />
 
         <TextView
             android:id="@+id/TXV_COLORSHOW"
-            android:layout_width="221dp"
+            android:layout_width="276dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="left"
             android:text=" 140"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+            android:textAppearance="@style/ColorStyle" />
     </LinearLayout>
 
     <LinearLayout
@@ -109,20 +107,19 @@
 
         <TextView
             android:id="@+id/TXV_TEA"
-            android:layout_width="82dp"
+            android:layout_width="103dp"
             android:layout_height="33dp"
             android:layout_alignParentStart="true"
             android:layout_weight="1"
             android:gravity="center"
             android:text="茶種："
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:textAppearance="@style/ColorStyle"
             tools:layout_editor_absoluteX="107dp"
             tools:layout_editor_absoluteY="162dp" />
 
         <Spinner
             android:id="@+id/SPINNER_TEA"
-            android:layout_width="230dp"
+            android:layout_width="267dp"
             android:layout_height="41dp"
             android:layout_weight="1"
             tools:layout_editor_absoluteX="186dp"
@@ -145,8 +142,8 @@
 
         <ImageView
             android:id="@+id/IMG_FLAVER"
-            android:layout_width="80dp"
-            android:layout_height="56dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@mipmap/tea"
             tools:layout_editor_absoluteX="16dp"
@@ -154,20 +151,19 @@
 
         <TextView
             android:id="@+id/TXV_FLAVOR"
-            android:layout_width="92dp"
-            android:layout_height="33dp"
+            android:layout_width="105dp"
+            android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_weight="1"
             android:gravity="center"
             android:text="口味："
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:textAppearance="@style/ColorStyle"
             tools:layout_editor_absoluteX="108dp"
             tools:layout_editor_absoluteY="289dp" />
 
         <Spinner
             android:id="@+id/SPINNER_FLAVOR"
-            android:layout_width="234dp"
+            android:layout_width="251dp"
             android:layout_height="34dp"
             android:layout_weight="1" />
 

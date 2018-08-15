@@ -51,6 +51,7 @@
             fontPath="fonts/SentyGoldenBell.ttf"
             android:layout_width="88dp"
             android:gravity="center"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/IMG_SETTING"
             android:layout_below="@+id/IMG_SETTING"
@@ -75,8 +76,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="選擇茶葉：紅茶 Black Tea"
             android:textAppearance="@style/ChooseTeaStyle"
+
             tools:layout_editor_absoluteX="49dp"
             tools:layout_editor_absoluteY="117dp" />
 
