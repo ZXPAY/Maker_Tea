@@ -131,11 +131,10 @@
 
         <TextView
             android:id="@+id/TXV_TEMPERATURE"
+            textStyle="bold"
             android:layout_width="93dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="溫度資料"
-            textStyle="bold"
             android:textAppearance="@style/TemperatureDataStyle"
             tools:layout_editor_absoluteX="236dp"
             tools:layout_editor_absoluteY="161dp" />
@@ -177,8 +176,7 @@
             android:layout_width="93dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="茶色資料"
-            android:textAppearance="@style/ColorStyle"
+            android:textAppearance="@style/ColorStyle2"
             tools:layout_editor_absoluteX="236dp"
             tools:layout_editor_absoluteY="237dp" />
     </LinearLayout>

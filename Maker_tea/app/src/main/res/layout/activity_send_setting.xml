@@ -80,7 +80,9 @@
             android:layout_weight="1"
             android:gravity="left"
             android:text=" 140"
-            android:textAppearance="@style/ColorStyle" />
+            android:textSize="50dp"
+            android:textAppearance="@style/ColorStyle2" />
+
     </LinearLayout>
 
     <LinearLayout

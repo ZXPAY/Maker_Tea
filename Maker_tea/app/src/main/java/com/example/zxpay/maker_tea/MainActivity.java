@@ -422,13 +422,13 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                                     e.printStackTrace();
                                 }
                             }
-                            try {
+//                            try {
                                 Run_Command();
-                            }
-                            catch (Exception e){
-                                e.printStackTrace();
-                                setToastAndShow("Run Command Error ...");
-                            }
+//                            }
+//                            catch (Exception e){
+//                                e.printStackTrace();
+//                                setToastAndShow("Run Command Error ...");
+//                            }
                             Data_Array = new ArrayList<>();
                         }
                         else{
@@ -480,7 +480,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                             String each_data[] = d.split("=");
                             for(int i=0;i<each_data.length;i++){
                                 try {
-                                    //Log.e("data", each_data[i]);
+                                    Log.e("data", each_data[i]);
                                     if(each_data[i].replaceAll("\\s", "").equals(getString(R.string.keyTaste))){
                                         if(VERBOSE==1) Log.e("taste:", each_data[i+1]);
                                         taste.add(each_data[i+1]);
@@ -510,7 +510,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                                         colorR.add(each_data[i+1]);
                                     }
                                     else if(each_data[i].replaceAll("\\s", "").equals(getString(R.string.keyTemp))){
-                                        if(VERBOSE==1) Log.e("colorR:", each_data[i+1]);
+                                        if(VERBOSE==1) Log.e("temp:", each_data[i+1]);
                                         temp.add(each_data[i+1]);
                                     }
                                 }
@@ -708,14 +708,15 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     private void setColorDataColor(float colorData){
         float calculateToFlavor = 100;
         if(ChoosingMode == CHOOSE_BLACK){
-            calculateToFlavor = (colorData/DEFAULT_BALCK_TEA_COLOR-1) * 10 + 5;
+            calculateToFlavor = (colorData/DEFAULT_BALCK_TEA_COLOR-1) * 10 - 5;
         }
         else if(ChoosingMode == CHOOSE_GREEN){
-            calculateToFlavor = (colorData/DEFAULT_GREEN_TEA_COLOR-1) * 10 + 5;
+            calculateToFlavor = (colorData/DEFAULT_GREEN_TEA_COLOR-1) * 10 - 5;
         }
         else if(ChoosingMode == CHOOSE_OOLONG){
-            calculateToFlavor = (colorData/DEFAULT_OOLONG_TEA_COLOR-1) * 10 + 5;
+            calculateToFlavor = (colorData/DEFAULT_OOLONG_TEA_COLOR-1) * 10 - 5;
         }
+        Log.e("ColorData", String.format("%.2f", colorData));
         Log.e("ColorDataColor", String.format("%.2f", calculateToFlavor));
 
         int ColorArray[] = {getResources().getColor(R.color.flavorLevel1),
@@ -729,7 +730,13 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                 getResources().getColor(R.color.flavorLevel9),
                 getResources().getColor(R.color.flavorLevel10)};
         int num = Integer.parseInt(String.format("%.0f", calculateToFlavor));
-        TXV_Color.setTextColor(ColorArray[num]);
+        try{
+            TXV_Color.setTextColor(ColorArray[num]);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     private void setChooseMode(String ChooseString){
